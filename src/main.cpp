@@ -20,6 +20,7 @@ const int   bat_pin = 3;
 const int   but_pin = 1;
 
 Adafruit_NeoPixel pixels(1, led_pin, NEO_RGB + NEO_KHZ800);
+// Adafruit_NeoPixel rgb_bi(1, LED_BUILTIN, NEO_RGB + NEO_KHZ800);
 
 // Handle the button press
 //variables to keep track of the timing of recent interrupts
@@ -74,9 +75,12 @@ void setup() {
 
   // Setup RGB Pixels
   pixels.begin();
+  // rgb_bi.begin();
+  // rgb_bi.setPixelColor(0, rgb_bi.Color(0, 0, 128));
+  // rgb_bi.show();
 
   // init Repeating Alarm
-  Alarm.alarmRepeat(18,00,0, AlarmEnable);  // 18:00 every day
+  Alarm.alarmRepeat(18,0,0, AlarmEnable);  // 18:00 every day
   
   // setup interrupt handling
   // disable the alarm once the button has been pressed
