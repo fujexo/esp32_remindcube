@@ -73,7 +73,10 @@ void setup() {
   printLocalTime();
 
   // wifi_disconnect();
-  
+
+  // Setup RGB Pixels
+  pixels.begin();
+
   // init Repeating Alarm
   Alarm.alarmRepeat(18,00,0, AlarmEnable);  // 18:00 every day
   
