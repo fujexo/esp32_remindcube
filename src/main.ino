@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <WiFi.h>
 #include <time.h>
 #include <TimeAlarms.h>
@@ -50,9 +51,6 @@ void AlarmEnable() {
 
 void setup() {
   Serial.begin(115200);
-  while (!Serial) {
-    ; // wait for serial port to connect.
-  }
   delay(1000);
 
   // Serial.print("Wakeup Time: ");
